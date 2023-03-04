@@ -1,0 +1,615 @@
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141413;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    padding: 0 20px;
+}
+
+nav {
+    background-color: #141413;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 40px);
+    top: 0;
+}
+
+nav,
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav,
+a {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
+nav,
+a:hover {
+    text-decoration: none;
+    color: #ca9728;
+    list-style-type: none;
+}
+
+p {
+    transition: 0.3s ease;
+}
+
+p:hover {
+    transition: 0.3s ease-in;
+    transform: scale(1.5);
+    color: #ca9728;
+}
+
+.inicio {
+    position: relative;
+}
+
+#servico {
+    color: white;
+    list-style-type: disc;
+    font-size: 30;
+    font-family: bebas-neue, sans-serif;
+}
+
+.textserviço {
+    color: white;
+    list-style-type: disc;
+    font-size: 25;
+    font-family: bebas-neue, sans-serif;
+    padding-right: 100px;
+}
+
+.pessoa {
+    width: 300px;
+}
+
+#trabalhos {
+    height: 600px;
+    width: 1583px;
+    transition: 0.4s ease-in;
+    background-image: url(img/nossos\ trabalhos.png);
+    background-repeat: no-repeat;
+    align-items: center;
+    margin-top: 75px;
+}
+
+#trabalhos:hover {
+    display: block;
+    align-items: center;
+    height: 600px;
+    width: 1583px;
+    transition: 0.4s ease-in;
+    background-image: url(img/banner.jpg);
+}
+
+.clientes {
+    color: white;
+    text-align: center;
+    font-family: bebas-neue, sans-serif;
+    font-size: 30;
+}
+
+.fotosclientes {
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+.fotoc {
+    transition: transform .5s ease;
+    margin: 15px;
+    margin-bottom: 0px;
+    width: 200px;
+}
+
+.fotoc:hover {
+    transform: scale(1.5);
+}
+
+b {
+    color: #ca9728;
+}
+
+#sobrenos {
+    color: white;
+    font-family: bebas-neue, sans-serif;
+    font-size: 30;
+    padding: 40px 250px 40px 250px;
+}
+
+.sobrenostitle {
+    color: white;
+    text-align: left;
+    font-family: bebas-neue, sans-serif;
+    font-size: 30;
+}
+
+.textosobre {
+    text-align: justify;
+    font-size: 22;
+    color: white;
+    margin-right: 100px;
+    padding: 0;
+}
+
+.predio {
+    width: 250px;
+}
+
+#contact {
+    background-color: #ca9728;
+    font-family: bebas-neue, sans-serif;
+    font-size: 30;
+    font-weight: bold;
+}
+
+.redes {
+    padding-left: 40em;
+    padding-bottom: 10px;
+    width: 50;
+    height: 50;
+}
+
+.textredes {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.textctt {
+    padding-bottom: 15px;
+    padding-left: 0px;
+    font-size: 30;
+    padding-left: 2em;
+}
+
+.menu-mobile {
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.menu-mobile nav a {
+
+    text-decoration: none;
+    display: block;
+    padding: 15px 0px;
+    width: 100%;
+    font-size: 16pt;
+}
+
+.menu-mobile nav a:hover {
+    background-color: none;
+}
+
+.btn-position {
+    display: flex;
+    justify-content: right;
+    margin: 10px 10px 10px 0;
+}
+
+button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.linha {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0, 2s;
+}
+
+button.ativar {
+    border: 4px solid white;
+}
+
+button.ativar .linha:nth-child(1) {
+    transform: translateY(7px) rotate(-45deg);
+}
+
+button.ativar .linha:nth-child(3) {
+    transform: translateY(-7px) rotate(45deg);
+
+}
+
+button.ativar .linha:nth-child(2) {
+    width: 0;
+}
+
+
+@media screen and(max-width: 650px) {
+
+    #botoesMenu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    a {
+        color: white;
+        background-color: none;
+
+    }
+
+    a:hover {
+        color: white;
+        background-color: none;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
+        height: calc(100vh - 50px);
+    }
+
+    button {
+        display: block;
+    }
+
+    .inicio {
+        margin-top: 70px;
+    }
+
+    #servico {
+        color: white;
+        list-style-type: disc;
+        font-size: 23;
+
+    }
+
+    .textserviço {
+        font-size: 18;
+        padding-right: 0px;
+    }
+
+    .pessoa {
+        width: 200px;
+    }
+
+    #trabalhos {
+        height: 244px;
+        width: 600px;
+        background-image: url(./img/banner650.jpg);
+    }
+
+    #trabalhos:hover {
+        height: 244px;
+        width: 600px;
+        background-image: url(./img/banner650.jpg);
+    }
+
+    .fotosclientes {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .clientes {
+        color: white;
+        text-align: center;
+        font-size: 20;
+    }
+
+    .fotoc {
+        width: 150px;
+    }
+
+    #sobrenos {
+        padding: 40px 30px 40px 30px;
+    }
+
+    .sobrenostitle {
+        font-size: 20;
+    }
+
+    .textosobre {
+        font-size: 15;
+        margin: 0px;
+        text-align: justify;
+    }
+
+    .predio {
+        display: none;
+    }
+
+    .textctt {
+        padding-bottom: 15px;
+        font-size: 30;
+        padding-left: 13.5em;
+    }
+
+    #contact {
+        font-size: 20;
+        font-weight: bold;
+    }
+
+    .redes {
+        padding-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    #botoesMenu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    a {
+        color: white;
+        background-color: none;
+
+    }
+
+    a:hover {
+        color: white;
+        text-shadow: 0px 0px 10px #ca9728;
+    }
+
+    .menu-mobile.abrir {
+        visibility: visible;
+        height: calc(100vh - 50px);
+    }
+
+    button {
+        display: block;
+    }
+
+    .inicio {
+        margin-top: 10px;
+    }
+
+    #servico {
+        color: white;
+        list-style-type: disc;
+        font-size: 30;
+    }
+
+    .textserviço {
+        font-size: 23;
+        padding-right: 0px;
+    }
+
+    .pessoa {
+        width: 200px;
+    }
+
+    #trabalhos {
+        height: 384px;
+        width: 1007px;
+        background-image: url(./img/banner1024.jpg);
+    }
+
+    #trabalhos:hover {
+        height: 384px;
+        width: 1007px;
+        background-image: url(./img/banner1024.jpg);
+    }
+
+    .fotosclientes {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .clientes {
+        color: white;
+        text-align: center;
+        font-size: 30;
+    }
+
+    .fotoc {
+        width: 200px;
+    }
+
+    #sobrenos {
+        padding: 20px 100px 40px 100px;
+    }
+
+    .sobrenostitle {
+        font-size: 30;
+    }
+
+    .textosobre {
+        font-size: 18;
+        text-align: justify;
+    }
+
+    .predio {
+        width: 220px;
+    }
+
+    .textctt {
+        padding-bottom: 15px;
+        padding-top: 10px;
+        padding-left: 22px;
+    }
+
+    #contact {
+        font-size: 20;
+        font-weight: bold;
+    }
+
+    .redes {
+        padding-left: 20px;
+    }
+
+}
+
+@media screen and (min-width:1025px) and (max-width: 1440px) {
+
+    #botoesMenu {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    a {
+        color: white;
+        background-color: none;
+
+    }
+
+    a:hover {
+        color: white;
+        background-color: none;
+    }
+
+    .inicio {
+        margin-top: 0px;
+    }
+
+    #servico {
+        color: white;
+        list-style-type: disc;
+        font-size: 30;
+    }
+
+    .textserviço {
+        font-size: 25;
+        padding-right: 100px;
+    }
+
+    .pessoa {
+        width: 300px;
+    }
+
+    #trabalhos {
+        height: 540px;
+        width: 1407px;
+        background-image: url(./img/nossostrabalhos1440.png);
+    }
+
+    #trabalhos:hover {
+        height: 540px;
+        width: 1407px;
+        background-image: url(./img/banner1440.jpg);
+    }
+
+    .fotosclientes {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .clientes {
+        color: white;
+        text-align: center;
+        font-size: 30;
+    }
+
+    .fotoc {
+        width: 200px;
+    }
+
+    #sobrenos {
+        padding: 20px 150px 40px 150px;
+    }
+
+    .sobrenostitle {
+        font-size: 30;
+    }
+
+    .textosobre {
+        font-size: 20;
+        margin: px;
+        text-align: justify;
+    }
+
+    .redes {
+        padding-left: 35em;
+        padding-bottom: 10px;
+        
+    }
+    
+    .textredes {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    
+    .textctt {
+        padding-bottom: 15px;
+        padding-left: 100px;
+        font-size: 30;
+        padding-left: 19em;
+    }
+
+}
+
+@media screen and (min-width:1441px) and (max-width: 1600px) {
+
+    .redes {
+        padding-left: 42em;
+        padding-bottom: 10px;        
+    }
+    
+    .textctt {
+        padding-bottom: 15px;
+        padding-left: 100px;
+        font-size: 30;
+        padding-left: 22.6em;
+    }
+
+}
+
+@media screen and (min-width:1680px) and (max-width: 1920px) {
+    #trabalhos {
+        height: 720px;
+        width: 1920px;
+        transition: 0.4s ease-in;
+        background-image: url(img/nossostrabalhos1920.png);
+        background-repeat: no-repeat;
+        align-items: center;
+        margin-top: 75px;
+    }
+    
+    #trabalhos:hover {
+        display: block;
+        align-items: center;
+        height: 720px;
+        width: 1920px;
+        transition: 0.4s ease-in;
+        background-image: url(img/banner1920.jpg);
+    }
+    
+}
+    
